@@ -30,7 +30,7 @@ public class Solution {
             
         int num = 0; //counter to track possible mines in a square's surrounding spaces
             
-        //step #1: check surrounding spaces for unrevealed mine ('M')
+        //case #1:  surrounding spaces have an unrevealed mine ('M')
         foreach(var dir in dirs) //for each direction in jagged array, do following:
         {
             int newRow = dir[0] + row; //check new row 
@@ -52,9 +52,9 @@ public class Solution {
             return board; //return the updated board 
         }
         
-        board[row][col] = 'B'; //update spot with a 'B'
+        board[row][col] = 'B'; //update spot with a 'B' if no minutes surrounding
         
-        //step #2: now recurse through surrounding spaces if unrevealed space is empty ('E')
+        //case #2: now recurse through surrounding spaces if unrevealed space is empty ('E')
         foreach(var dir in dirs)
         {
             int newRow = dir[0] + row; //check new row
