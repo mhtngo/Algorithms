@@ -20,7 +20,8 @@ public class Solution {
         int n = board[0].Length; //columns in board = width of an element of jagged array
         
         //if click index is unrevealed mine or a revealed mine:
-            //1. change that square to reveal a mine()
+            //1. change that square to reveal a mine
+            //2. return board
         if(board[row][col] == 'M' || board[row][col] == 'X')
         {
             board[row][col] = 'X';
