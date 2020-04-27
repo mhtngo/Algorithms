@@ -52,7 +52,7 @@ public class Solution {
             return board; //return the updated board 
         }
         
-        board[row][col] = 'B'; //update spot with a 'B' if no minutes surrounding
+        board[row][col] = 'B'; //update spot with a 'B' if no mines surrounding
         
         //case #2: now recurse through surrounding spaces if unrevealed space is empty ('E')
         foreach(var dir in dirs)
